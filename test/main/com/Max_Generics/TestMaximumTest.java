@@ -22,7 +22,6 @@ public class TestMaximumTest {
 		Integer num_arr[] = new Integer[] { 3, 2, 1 };
 		//System.out.println(testObj.findMaximum(Arrays.stream(num_arr)).getClass().getName());
 		assertEquals(3, (int)testObj.findMaximum(Arrays.stream(num_arr)));
-		assertEquals(3, testObj.maxNumber(Arrays.stream(num_arr)));
 	}
 
 	// TC 1.2
@@ -30,8 +29,6 @@ public class TestMaximumTest {
 	public void maxNumberAtSecondPos_ShouldReturnSame() {
 		Integer num_arr[] = new Integer[] { 1, 3, 2 };
 		assertEquals(3, (int)testObj.findMaximum(Arrays.stream(num_arr)));
-=======
-		assertEquals(3, testObj.maxNumber(Arrays.stream(num_arr)));
 	}
 
 	// TC 1.3
@@ -43,20 +40,11 @@ public class TestMaximumTest {
 
 	//Float Test
 
-=======
-		assertEquals(3, testObj.maxNumber(Arrays.stream(num_arr)));
-	}
-
-
-	//Float Test
-	
 	// TC 1.1
 	@Test
 	public void maxFloatAtFirstPos_ShouldReturnSame() {
 		Float fl_arr[] = new Float[] { 3f, 2f, 1f };
 		assertEquals(3f, (float)testObj.findMaximum(Arrays.stream(fl_arr)),0);
-=======
-		assertEquals(3f, testObj.maxFloat(Arrays.stream(fl_arr)),0);
 	}
 
 	// TC 1.2
@@ -64,8 +52,6 @@ public class TestMaximumTest {
 	public void maxFloatAtSecondPos_ShouldReturnSame() {
 		Float fl_arr[] = new Float[] { 1f, 3f, 2f };
 		assertEquals(3f, (float)testObj.findMaximum(Arrays.stream(fl_arr)),0);
-=======
-		assertEquals(3f, testObj.maxFloat(Arrays.stream(fl_arr)),0);
 	}
 
 	// TC 1.3
@@ -97,9 +83,4 @@ public class TestMaximumTest {
 		String str_arr[] = new String[] { "Apple","Kheera","Pineapple" };
 		assertEquals("Pineapple", testObj.findMaximum(Arrays.stream(str_arr)));
 	}
-=======
-		assertEquals(3f, testObj.maxFloat(Arrays.stream(fl_arr)),0);
-	}
-=======
-
 }
