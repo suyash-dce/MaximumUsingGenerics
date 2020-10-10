@@ -13,8 +13,10 @@ public class TestMaximumTest {
 	public void init() {
 		testObj=new TestMaximumMain();
 	}
-	
+
 	//Integer Test
+=======
+
 
 	// TC 1.1
 	@Test
@@ -36,6 +38,7 @@ public class TestMaximumTest {
 		Integer num_arr[] = new Integer[] { 1, 2, 3 };
 		assertEquals(3, testObj.maxNumber(Arrays.stream(num_arr)));
 	}
+
 
 	//Float Test
 	
@@ -59,4 +62,6 @@ public class TestMaximumTest {
 		Float fl_arr[] = new Float[] { 1f, 2f, 3f };
 		assertEquals(3f, testObj.maxFloat(Arrays.stream(fl_arr)),0);
 	}
+=======
+
 }
