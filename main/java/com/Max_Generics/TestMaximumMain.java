@@ -1,6 +1,8 @@
 import java.util.Arrays;
 import java.util.Scanner;
+=======
 import java.util.stream.Collectors;
+
 import java.util.stream.Stream;
 
 public class TestMaximumMain <T extends Comparable<T>> {
@@ -8,12 +10,31 @@ public class TestMaximumMain <T extends Comparable<T>> {
 	//Generic Method
 	public <T extends Comparable<T>> T findMaximum(Stream<T> gen_str) {
 
+		return gen_str.sorted().reduce((less,more) -> more).get();
+=======
 		return gen_str.collect(Collectors.maxBy(T::compareTo)).get();
+
 	}
 
 	public void getInput() {
 		
 		Scanner sc= new Scanner(System.in);
+		System.out.println("Please enter no of objects to input: ");
+		int run_loop=sc.nextInt();
+		
+		for (int i=0;i<run_loop;i++) {
+			System.out.print("Input "+(i+1)+": ");
+	    	T input = (T) sc.next();
+	    	push(input);
+		}
+    	sc.close();
+	}
+	
+	public void push(T... input) {
+
+    	Stream<T> gen_stream=Arrays.stream(input);
+    	System.out.println("Maximum = "+findMaximum(gen_stream));
+=======
 		System.out.println("Please enter 3 objects: ");
     	System.out.print("Input 1: ");
     	T input1 = (T) sc.next();
@@ -38,7 +59,6 @@ public static void main( String[] args ) {
 		
 		TestMaximumMain buildObj = new TestMaximumMain();
     	buildObj.getInput();
-=======
 import java.util.stream.Stream;
 
 public class TestMaximumMain {
@@ -54,7 +74,6 @@ public class TestMaximumMain {
 	public static void main( String[] args ) {
 		
 	TestMaximumMain buildObj = new TestMaximumMain();
-=======
 
 	public static void main( String[] args ) {
 		
